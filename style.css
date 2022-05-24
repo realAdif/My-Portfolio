@@ -1,0 +1,136 @@
+:root{
+    --text-color: white;
+    --background: black; 
+}
+
+
+body{
+    background-color:rgba(0, 0, 0);
+}
+
+
+.top-of-the-page{
+    height: 50vh;
+    width: 100%;
+    background-image: url(images/back2.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.logo{
+    color: var(--text-color);
+    font-size: 40px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: larger;
+    
+}
+
+nav ul li a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    
+}
+nav ul li a:hover{
+    color: rgba(233, 67, 67, 0.719);
+    transition: .4s;
+}
+
+.about-me-title, .contact-title,.skills-title {
+    color: var(--text-color);
+    font-size: 35px;
+    letter-spacing: 1px;
+    padding-left: 8%;
+}
+.about-me, .skills, .contact{
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.contact-section{
+    padding-bottom: 150px
+}
+
+.float-right{
+    float: right;
+    margin-left: 25px;
+}
+#contact-caluator{
+    width: 100px;
+    height: 100px;
+    padding-right: 50px;
+    
+}
+
+p{
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: var(--text-color);
+    padding-left: 110px;
+    font-size: 15px;
+}
+p:hover{
+    cursor: grab;
+}
+
+footer{
+   
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.github-logo{
+    width: 40px;
+    float: right;
+}
+span[data-descr]{
+    position: relative;
+    text-decoration: underline;
+    color: black;
+    cursor: grab;
+  }
+
+span[data-descr]:hover::after{
+    content: attr(data-descr);
+    float: right;
+    align-self: auto;
+    min-width: 200px;
+    color: #fff;
+    font-size: 20px;
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    header,
+    main {
+      flex-direction: column;
+    }
+  
+    section {
+      padding-right: 0;
+    }
+  
+    aside {
+      width: 100%;
+      text-align: center;
+    }
+  }
